@@ -1,1 +1,1 @@
-# G-n-rateur-automatique-de-phrases---Projet-C---L2
+# Generateur-automatique-de-phrases---Projet-C---L2
