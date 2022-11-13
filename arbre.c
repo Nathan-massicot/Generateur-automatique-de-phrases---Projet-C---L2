@@ -63,8 +63,13 @@ void add_letter_in_list(t_std_list * list, char letter){
         list->head = new_cell;
     }else
     {
-        new_cell->next = list->head;
-        list->head = new_cell;
+     p_cell temp = list.head;
+        while(temp != NULL)
+        {
+            printf("-> | %c |", temp->value);
+            temp = temp->next;
+        }
+        printf("-> out\n");
     }
 }
 
