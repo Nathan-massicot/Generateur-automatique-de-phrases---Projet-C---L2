@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 #include "functions_test.h"
-#include "arbre.h"
+#include "abre.h"
 
 /* fonction qui permet d'insérer un flechie et ses valeurs dans la queue du mot correspondant
  * modifie directement la queue du mot correspondant, utilise alors un pointeur en paramètre pour la queue */

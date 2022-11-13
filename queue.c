@@ -61,4 +61,3 @@ void displayQueue(t_queue q)
         printf("<- in\n");
     }
 }
-
