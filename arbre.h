@@ -1,4 +1,3 @@
-
 #ifndef PROJETC_TEST_ARBRE_H
 #define PROJETC_TEST_ARBRE_H
 
@@ -7,40 +6,49 @@
 #include "queue.h"
 
 // structure de la cellulle
-struct s_cell
+struct noeud;
+
+typedef struct cellule
 {
-    char value;
-    struct s_cell *next;
-};
-typedef struct s_cell t_cell, *p_cell;
+    struct noeud* fils;
+    struct cellule* frere;
+}cellule;
+
 
 // cree la structure de la liste des fils dans l'arbre
 typedef struct s_std_list
 {
-    p_cell head;
-} t_std_list;
+    int element;
+    struct noeud* liste_noeud ;
+} liste_fils;
+
+
 
 // cree le noeud de l'arbre
-struct s_letter_node
+typedef struct noeud
 {
     char letter ;
-    t_std_list sons ;
+    liste_fils* sons ;
     t_queue* q;
-};
-typedef struct s_letter_node t_letter_node, *p_letter_node;
+}noeud_arbre;
+
 
 
 // cree l'arbre
 typedef struct s_tree
 {
-    t_letter_node root;
-} t_tree;
+    noeud_arbre* root;
+} arbre_n_aire;
+
+
+
+
 
 p_cell create_empty_cell();
 t_std_list create_empty_list();
 p_letter_node create_new_node(char);
-int is_letter_in_list(t_std_list, char);
-void add_letter_in_list(t_std_list *, char);
+int is_letter_in_list(liste_fils, char);
+void add_letter_in_list(liste_fils *, char);
 void display_list(t_std_list);
 void next_letter_node(p_letter_node, char);
 
